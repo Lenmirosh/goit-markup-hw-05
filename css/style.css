@@ -211,6 +211,7 @@ main {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
+  width: 100%;
 }
 
 /* HERO */
