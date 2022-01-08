@@ -113,6 +113,12 @@ main {
 .animation-shadow {
   transition: 250ms shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
+.animation-outline {
+  transition: 250ms outline cubic-bezier(0.4, 0, 0.2, 1);
+}
+.animation-transform {
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* NAVIGATION */
 
@@ -694,9 +700,10 @@ main {
 
 .gallery-card-description {
   padding: 20px 24px 20px 24px;
-  border-right: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
+  /* border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee; */
 }
 
 .sacondary-button:hover {
@@ -761,19 +768,24 @@ main {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: none;
+  visibility: visible;
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   width: 528px;
   height: 581px;
   background-color: var(--white-color);
 
   text-align: center;
 }
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
 .main-modal-registration {
   display: inline-block;
   margin-bottom: 20px;
@@ -884,10 +896,6 @@ main {
   border-color: transparent;
   padding: 0px;
 }
-/* .modal-icon.button {
-  fill: var(--title-text-color);
- 
-} */
 
 .modal-close-form:hover,
 .modal-close-form:focus {
