@@ -563,7 +563,8 @@ main {
 .footer-sosial-icon {
   fill: var(--white-color);
 }
-.footer-appeal {
+.footer-appeal,
+.footer-appeal-form {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -579,6 +580,9 @@ main {
 
 .addres-wrap {
   margin-right: 70px;
+}
+.appeal-wrap {
+  margin-right: 93px;
 }
 
 .footer-appeal-link {
@@ -597,6 +601,20 @@ main {
 .footer-appeal-link:hover,
 .footer-appeal-link:focus {
   background-color: var(--accent-color);
+}
+.appeal-form-enter {
+  position: relative;
+  display: inline-block;
+}
+.footer-appeal-form-enter {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+}
+.footer-appeal-form-clue {
+  position: absolute;
+  top: -358px;
+  color: rgba(255, 255, 255, 0, 6);
 }
 
 /* BUTTONS */
@@ -771,7 +789,7 @@ main {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  visibility: none;
+  visibility: hidden;
 }
 
 .backdrop.is-hidden .modal {
